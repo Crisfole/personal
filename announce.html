@@ -1,0 +1,296 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<style>
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+		html, body {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+		}
+
+		.slide {
+			position: relative;
+			height: 100%;
+			width: 100%;
+		}
+		.slide > img {
+			z-index: -1;
+			opacity: 0;
+			position: fixed;
+		}
+		.slide p {
+			display: block;
+			position: absolute;
+			top: 10%;
+			font-size: 2.5em;
+			border-radius: 4px;
+			padding: 4px 8px;
+			box-shadow: 5px 5px 10px 3px grey;
+			background-color: rgba(255, 255, 255, .4);
+		}
+
+		#intro p {
+			left: 18%;
+			border-radius: 3px;
+		}
+		#snowshoeing {
+			height: 66%;
+			top: 2%;
+			right: 1%;
+			z-index: -1;
+			box-shadow: -3px 3px 5px -1px black;
+		}
+		#colorado {
+			height: 70%;
+			bottom: 2%;
+			right: 1%;
+			z-index: -2;
+			box-shadow: -3px -3px 5px -1px black;
+		}
+		#reyes {
+			height: 96%;
+			top: 2%;
+			left: 1%;
+			z-index: -3;
+			box-shadow: -3px -3px 5px -1px black;
+		}
+
+		#job p {
+			left: 10%;
+			top: 45%;
+			color: teal;
+		}
+		#crouse-logo {
+			top: 25%;
+			right: 26%;
+		}
+		#crouse-bldg {
+			bottom: 25%;
+			right: 25%;
+		}
+
+		#home p {
+			right: 5%;
+		}
+		#sold {
+			top: 1%;
+			left: 2%;
+			box-shadow: -3px -3px 5px -1px grey;
+		}
+		#house {
+			bottom: 1%;
+			right: 2%;
+			box-shadow: -3px -3px 5px -1px grey;
+		}
+
+		#dog p {
+			left: 35%;
+		}
+		#monty {
+			top: 14%;
+			right: 24%;
+			left: 24%;
+		}
+
+		#change-2014 p {
+			left: 33%;
+			top: 48%;
+		}
+
+		#syracuse p {
+			background-color: #333;
+			color: #e24912;
+			top: 48%;
+			left: 5%;
+		}
+		#su {
+			top: 20%;
+			right: 5%;
+		}
+
+		#wedding p {
+			top: 48%;
+			right: 5%;
+		}
+		#ring {
+			left: 5%;
+			top: 1%;
+			height: 98%;
+		}
+
+		#announcement {
+			background: -moz-linear-gradient(top,  rgba(255,252,201,0) 0%, rgba(255,252,201,0.05) 15%, rgba(255,252,201,0.28) 85%, rgba(255,252,201,0.33) 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,252,201,0)), color-stop(15%,rgba(255,252,201,0.05)), color-stop(85%,rgba(255,252,201,0.28)), color-stop(100%,rgba(255,252,201,0.33))); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top,  rgba(255,252,201,0) 0%,rgba(255,252,201,0.05) 15%,rgba(255,252,201,0.28) 85%,rgba(255,252,201,0.33) 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top,  rgba(255,252,201,0) 0%,rgba(255,252,201,0.05) 15%,rgba(255,252,201,0.28) 85%,rgba(255,252,201,0.33) 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top,  rgba(255,252,201,0) 0%,rgba(255,252,201,0.05) 15%,rgba(255,252,201,0.28) 85%,rgba(255,252,201,0.33) 100%); /* IE10+ */
+			background: linear-gradient(to bottom,  rgba(255,252,201,0) 0%,rgba(255,252,201,0.05) 15%,rgba(255,252,201,0.28) 85%,rgba(255,252,201,0.33) 100%); /* W3C */
+		}
+
+		#announcement p, #parents p, #timing p, #nickname p {
+			top: 48%;
+			text-align: center;
+		}
+
+		#announcement p {
+			left: 33%;
+		}
+
+		#parents {
+			background: -moz-linear-gradient(top,  rgba(255,252,201,0.33) 0%, rgba(255,252,201,0.38) 15%, rgba(255,252,201,0.61) 85%, rgba(255,252,201,0.66) 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,252,201,0.33)), color-stop(15%,rgba(255,252,201,0.38)), color-stop(85%,rgba(255,252,201,0.61)), color-stop(100%,rgba(255,252,201,0.66))); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top,  rgba(255,252,201,0.33) 0%,rgba(255,252,201,0.38) 15%,rgba(255,252,201,0.61) 85%,rgba(255,252,201,0.66) 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top,  rgba(255,252,201,0.33) 0%,rgba(255,252,201,0.38) 15%,rgba(255,252,201,0.61) 85%,rgba(255,252,201,0.66) 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top,  rgba(255,252,201,0.33) 0%,rgba(255,252,201,0.38) 15%,rgba(255,252,201,0.61) 85%,rgba(255,252,201,0.66) 100%); /* IE10+ */
+			background: linear-gradient(to bottom,  rgba(255,252,201,0.33) 0%,rgba(255,252,201,0.38) 15%,rgba(255,252,201,0.61) 85%,rgba(255,252,201,0.66) 100%); /* W3C */
+		}
+
+		#parents p {
+			left: 32%;
+		}
+
+		#timing {
+			background: -moz-linear-gradient(top,  rgba(255,252,201,0.66) 0%, rgba(255,252,201,0.71) 15%, rgba(255,252,201,0.95) 85%, rgba(255,252,201,1) 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,252,201,0.66)), color-stop(15%,rgba(255,252,201,0.71)), color-stop(85%,rgba(255,252,201,0.95)), color-stop(100%,rgba(255,252,201,1))); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top,  rgba(255,252,201,0.66) 0%,rgba(255,252,201,0.71) 15%,rgba(255,252,201,0.95) 85%,rgba(255,252,201,1) 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top,  rgba(255,252,201,0.66) 0%,rgba(255,252,201,0.71) 15%,rgba(255,252,201,0.95) 85%,rgba(255,252,201,1) 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top,  rgba(255,252,201,0.66) 0%,rgba(255,252,201,0.71) 15%,rgba(255,252,201,0.95) 85%,rgba(255,252,201,1) 100%); /* IE10+ */
+			background: linear-gradient(to bottom,  rgba(255,252,201,0.66) 0%,rgba(255,252,201,0.71) 15%,rgba(255,252,201,0.95) 85%,rgba(255,252,201,1) 100%); /* W3C */
+		}
+
+		#timing p {
+			left: 41%;
+		}
+
+		#nickname, #credits {
+			background-color: #FFFCC9;
+		}
+		#nickname p {
+			left: 44%;
+		}
+		#rattle {
+			z-index:1;
+			right: 10%;
+			bottom: 4%;
+		}
+		#credits {
+			font-size: .75em;
+		}
+		</style>
+		<script src='http://codeorigin.jquery.com/jquery-2.0.3.min.js' type='text/javascript'></script>
+ 		</head>
+	<body>
+		<div id='intro' class='slide'>
+			<p>2013 was an eventful year for the Pfohl family!</p>
+			<img id='snowshoeing' src='snowshoeing.jpg'/>
+			<img id='reyes' src='reyes.jpg' />
+			<img id='colorado' src='colorado.jpg' />
+		</div>
+		<div id='job' class='slide'>
+			<p>A new job...</p>
+			<img id='crouse-logo' src='logo.jpg' />
+		</div>
+		<div id='home' class='slide'>
+			<p>...a new home...</p>
+			<img id='sold' src='sold.jpg' />
+			<img id='house' src='house.jpg' />
+		</div>
+		<div id='dog' class='slide'>
+			<p>...and an addition to the family.</p>
+			<img id='monty' src='monty.jpg' />
+		</div>
+		<div id='change-2014' class='slide'>
+			<p>2014 will bring some more changes.</p>
+		</div>
+		<div id='syracuse' class='slide'>
+			<p>A part time Master's program...</p>
+			<img id='su' src='syracuse.jpg' />
+		</div>
+		<div id='wedding' class='slide'>
+			<p>...a new sister-in-law...</p>
+			<img id='ring' src='ring.jpg' />
+		</div>
+		<div id='announcement' class='slide'>
+			<p>...and the newest member of our family!</p>
+		</div>
+		<div id='parents' class='slide'>
+			<p>Chris and Brittney are proud to announce...</p>
+		</div>
+		<div id='timing' class='slide'>
+			<p>...coming late May...</p>
+		</div>
+		<div id='nickname' class='slide'>
+			<p>...Junior Pfohl.</p>
+			<img id='rattle' src='rattle.png' />
+		</div>
+		<div id='credits'>
+			<div>
+				Crouse Hospital Logo pilfered from <a href='http://www.crouse.org'>Crouse's own website</a>
+			</div>
+			<div>
+				Baby rattle "borrowed" without intent to return from <a href='http://www.visualpharm.com/'>VisualPhram.com</a>
+			</div>
+			<div>
+				Syracuse University Logo brazenly stolen from <a href='http://www.syracuse.edu'>Syracuse.edu</a>
+			</div>
+			<div>
+				All other images either mine or used without permission from my brother's facebook feed.
+			</div>
+			<div>
+				If you are Syracuse or Crouse and want me to stop using, or to use a different image, please contact me at
+				chris at pfohl dot us.
+			</div>
+		</div>
+	</body>
+
+	<script type='text/javascript'>
+		var $window = $(window);
+		var slides = [];
+		$('.slide').each(function(_, slide) {
+			var $slide = $(slide);
+			slides.push($slide);
+			$slide.$img = $slide.find('img');
+		});
+		function getWindow() {
+			var top = $window.scrollTop();
+			var bottom = top + $window.height();
+			return [top, bottom];
+		}
+		function onScroll(evt) {
+			var windowTop, windowBottom, _ref;
+			_ref = getWindow(), windowTop = _ref[0], windowBottom = _ref[1];
+
+			for(var i = 0; i < slides.length; i++) {
+				var $slide, slideTop, slideBottom, slideHeight;
+				$slide = slides[i];
+				slideTop = $slide.position().top;
+				slideHeight = $slide.height();
+				slideBottom = slideTop + slideHeight;
+
+				if (slideTop > windowBottom || slideBottom < windowTop) {
+					$slide.$img.css('opacity', 0)
+				} else {
+					if (slideBottom > windowTop && slideTop > slideBottom) {
+						var opacity = (slideBottom - windowTop) / slideHeight;
+						opacity = .5 - Math.cos(opacity * Math.PI) / 2;
+						$slide.$img.css('opacity', opacity);
+					} else {
+						var opacity = (windowBottom - slideTop) / slideHeight;
+						opacity = .5 - Math.cos(opacity * Math.PI) / 2;
+						$slide.$img.css('opacity', opacity);
+					}
+				}
+			}
+		}
+		$window.scroll(onScroll);
+		$window.resize(onScroll);
+		onScroll()
+	</script>
+</html>
